@@ -1,0 +1,35 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "document",
+      "filename": "test_doc.txt",
+      "chunk_count": 1,
+      "id": "doc_test_doc.txt"
+    },
+    {
+      "type": "entity",
+      "name": "Artificial Intelligence",
+      "id": "entity_Artificial Intelligence"
+    },
+    {
+      "type": "entity",
+      "name": "The University of Tomorrow",
+      "id": "entity_The University of Tomorrow"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contains",
+      "source": "doc_test_doc.txt",
+      "target": "entity_Artificial Intelligence"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_test_doc.txt",
+      "target": "entity_The University of Tomorrow"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "document",
+      "filename": "MBA-International-Business-2024-25.pdf",
+      "chunk_count": 369,
+      "id": "doc_MBA-International-Business-2024-25.pdf"
+    },
+    {
+      "type": "entity",
+      "name": "DEPARTMENT OF INTERNATIONAL BUSINESS \nSCHOOL OF MANAGEMENT \n \n \n \n \nMBA",
+      "id": "entity_DEPARTMENT OF INTERNATIONAL BUSINESS \nSCHOOL OF MANAGEMENT \n \n \n \n \nMBA"
+    },
+    {
+      "type": "entity",
+      "name": "STRUCTURE",
+      "id": "entity_STRUCTURE"
+    },
+    {
+      "type": "entity",
+      "name": "Global Business Environment",
+      "id": "entity_Global Business Environment"
+    },
+    {
+      "type": "entity",
+      "name": "International Trade  Procedures and Documentation",
+      "id": "entity_International Trade  Procedures and Documentation"
+    },
+    {
+      "type": "entity",
+      "name": "Quantitative Techniques for Business Decisions \nMIBA",
+      "id": "entity_Quantitative Techniques for Business Decisions \nMIBA"
+    },
+    {
+      "type": "entity",
+      "name": "Business Communication and Negotiation Skills",
+      "id": "entity_Business Communication and Negotiation Skills"
+    },
+    {
+      "type": "entity",
+      "name": "International Marketing \nMIBA",
+      "id": "entity_International Marketing \nMIBA"
+    },
+    {
+      "type": "entity",
+      "name": "International Human Resources Management",
+      "id": "entity_International Human Resources Management"
+    },
+    {
+      "type": "entity",
+      "name": "Global Financial Management",
+      "id": "entity_Global Financial Management"
+    },
+    {
+      "type": "entity",
+      "name": "International Economics",
+      "id": "entity_International Economics"
+    },
+    {
+      "type": "entity",
+      "name": "Organizational Behaviour",
+      "id": "entity_Organizational Behaviour"
+    },
+    {
+      "type": "entity",
+      "name": "Soft Skills",
+      "id": "entity_Soft Skills"
+    },
+    {
+      "type": "entity",
+      "name": "al Business \nMIBA",
+      "id": "entity_al Business \nMIBA"
+    },
+    {
+      "type": "entity",
+      "name": "Global Logistics",
+      "id": "entity_Global Logistics"
+    },
+    {
+      "type": "entity",
+      "name": "Supply Chain Management \nMIBA",
+      "id": "entity_Supply Chain Management \nMIBA"
+    },
+    {
+      "type": "entity",
+      "name": "Workshop Entrepreneurial Skills",
+      "id": "entity_Workshop Entrepreneurial Skills"
+    },
+    {
+      "type": "entity",
+      "name": "Global Business Ethics",
+      "id": "entity_Global Business Ethics"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_DEPARTMENT OF INTERNATIONAL BUSINESS \nSCHOOL OF MANAGEMENT \n \n \n \n \nMBA"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_STRUCTURE"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Global Business Environment"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_International Trade  Procedures and Documentation"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Quantitative Techniques for Business Decisions \nMIBA"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Business Communication and Negotiation Skills"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_International Marketing \nMIBA"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_International Human Resources Management"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Global Financial Management"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_International Economics"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Organizational Behaviour"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Soft Skills"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_al Business \nMIBA"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Global Logistics"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Supply Chain Management \nMIBA"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Workshop Entrepreneurial Skills"
+    },
+    {
+      "relation": "contains",
+      "source": "doc_MBA-International-Business-2024-25.pdf",
+      "target": "entity_Global Business Ethics"
+    }
+  ]
+}

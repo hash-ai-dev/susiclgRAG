@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+chromadb
+google-generativeai
+python-multipart
+networkx
+pydantic
+python-dotenv
+sentence-transformers
+pymupdf
+easyocr
+spacy
+pillow
+numpy
+scikit-learn
