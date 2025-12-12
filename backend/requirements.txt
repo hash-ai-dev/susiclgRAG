@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 chromadb
-google-generativeai
+requests
 python-multipart
 networkx
 pydantic
