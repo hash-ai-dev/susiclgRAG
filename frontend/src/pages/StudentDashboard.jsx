@@ -77,7 +77,7 @@ const StudentDashboard = () => {
         setTimeout(() => setSpellbookExpression('idle'), 2000);
     };
 
-    // Handle Chat
+    // Handle Chat with Streaming
     const handleChat = async () => {
         if (!chatMessage.trim()) return;
 
@@ -88,16 +88,64 @@ const StudentDashboard = () => {
         setIsTyping(true);
 
         try {
-            const res = await axios.post('http://localhost:8000/chat', { message: userMsg });
-            setIsTyping(false);
-            setChatHistory(prev => [...prev, { role: 'bot', content: res.data.response, type: 'text' }]);
+            // Use fetch for streaming support
+            const response = await fetch('http://localhost:8000/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: userMsg }),
+            });
+
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            setIsTyping(false); // Stop typing indicator as streaming starts
             setSpellbookExpression('talking');
-            setTimeout(() => setSpellbookExpression('happy'), 1500);
+
+            // Create a placeholder for the bot's response
+            setChatHistory(prev => [...prev, { role: 'bot', content: '', type: 'text' }]);
+
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let botReply = '';
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                const chunk = decoder.decode(value, { stream: true });
+                botReply += chunk;
+
+                // Update the last message in history with the accumulated text
+                setChatHistory(prev => {
+                    const newHistory = [...prev];
+                    const lastMsgIndex = newHistory.length - 1;
+                    if (lastMsgIndex >= 0) {
+                        newHistory[lastMsgIndex] = {
+                            ...newHistory[lastMsgIndex],
+                            content: botReply
+                        };
+                    }
+                    return newHistory;
+                });
+            }
+
+            setSpellbookExpression('happy');
             setTimeout(() => setSpellbookExpression('idle'), 4000);
+
         } catch (error) {
             console.error(error);
             setIsTyping(false);
             setSpellbookExpression('confused');
+            // Remove the empty bot message if it was added (optional, but cleaner)
+            setChatHistory(prev => {
+                // Check if the last message was the empty bot one we just added
+                if (prev.length > 0 && prev[prev.length - 1].role === 'bot' && prev[prev.length - 1].content === '') {
+                    return prev.slice(0, -1);
+                }
+                return prev;
+            });
+
             setChatHistory(prev => [...prev, {
                 role: 'bot',
                 content: "🦉 Hmm, something went wrong with the magic...",
