@@ -21,10 +21,8 @@ from backend.models import ChatRequest
 app = FastAPI()
 
 # Configuration for Local LLM
-OLLAMA_BASE_URL = "http://localhost:11434/api/generate"
-# Using the specific model requested: LLaMA 3.2 3B
-# In Ollama, this is usually just 'llama3.2' or 'llama3.2:3b'
-LOCAL_MODEL_NAME = "llama3.2" 
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/api/generate")
+LOCAL_MODEL_NAME = os.getenv("LOCAL_MODEL_NAME", "llama3.2") 
 
 # CORS
 app.add_middleware(

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Data & Database
+chroma_db/
+college_rag.db
+knowledge_graph.json
+uploads/
+
+# Node/Frontend
+node_modules/
+dist/
+.DS_Store
